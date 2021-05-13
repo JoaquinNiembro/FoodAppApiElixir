@@ -6,6 +6,7 @@ defmodule FoodApp.Restaurants.Restaurant do
     field :name, :string
     field :city, :string
     field :menu, :string
+    has_many :promotions, FoodApp.Restaurants.Promotion
 
     timestamps()
   end

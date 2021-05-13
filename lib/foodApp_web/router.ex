@@ -14,12 +14,14 @@ defmodule FoodAppWeb.Router do
 
     post "/auth/signup", UserController, :create
     post "/auth/signin", UserController, :signin
+    resources "/restaurants", RestaurantController, except: [:new, :edit]
   end
 
   scope "/api", FoodAppWeb do
     pipe_through :api
 
-    resources "/restaurants", RestaurantController, except: [:new, :edit]
+    
+    resources "/promotions", PromotionController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development
