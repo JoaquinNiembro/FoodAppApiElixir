@@ -3,6 +3,8 @@ defmodule FoodApp.Users do
   alias FoodApp.Repo
   alias FoodApp.Users.User
 
+  def get_user!(id), do: Repo.get(User, id)
+
   def create_user(attrs \\ %{}) do
     %User{}
     |> User.changeset(attrs)

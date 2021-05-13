@@ -14,13 +14,14 @@ defmodule FoodAppWeb.Router do
 
     post "/auth/signup", UserController, :create
     post "/auth/signin", UserController, :signin
-    resources "/restaurants", RestaurantController, except: [:new, :edit]
+    resources "/restaurants", RestaurantController, except: [:new, :edit, :create, :delete]
   end
 
   scope "/api", FoodAppWeb do
-    pipe_through :api
+    pipe_through [:api, :jwt_authenticated]
 
-    
+    post "/restaurants", RestaurantController, :create
+    delete "/restaurants/:id", RestaurantController, :delete
     resources "/promotions", PromotionController, except: [:new, :edit]
   end
 

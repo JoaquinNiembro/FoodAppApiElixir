@@ -3,7 +3,6 @@ defmodule FoodAppWeb.PromotionController do
 
   alias FoodApp.Restaurants
   alias FoodApp.Restaurants.Promotion
-
   action_fallback FoodAppWeb.FallbackController
 
   def index(conn, _params) do

@@ -28,7 +28,7 @@ config :phoenix, :json_library, Jason
 
 config :foodApp, FoodApp.Guardian,
        issuer: "foodApp",
-       secret_key: "AULdneJfiKl2gie82cYFu+IAPL19TRvPFFRh5GyGczhWEvB3frJHBa/wioY2ceMK"
+       secret_key: "XMhca1/qf7znNFcjrK5AnEK7NAQZskwfG5KOeTSre3jcYghjNp2sAsTivCvvcxOG"
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
