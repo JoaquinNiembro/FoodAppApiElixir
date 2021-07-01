@@ -14,6 +14,7 @@ defmodule FoodAppWeb.Router do
 
     post "/auth/signup", UserController, :create
     post "/auth/signin", UserController, :signin
+    resources "/notes", NoteController
     resources "/restaurants", RestaurantController, except: [:new, :edit, :create, :delete]
   end
 
